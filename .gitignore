@@ -1,2 +1,8 @@
 .env
+<<<<<<< HEAD
 data
+=======
+.DS_Store
+Icon
+?Icon
+>>>>>>> update master from upstream, .env.sample, start.sh
