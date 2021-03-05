@@ -1,5 +1,4 @@
-# FROM wordpress:latest
-FROM wordpress
+FROM wordpress:latest
 
 # install the PHP extensions we need
 RUN set -x \
