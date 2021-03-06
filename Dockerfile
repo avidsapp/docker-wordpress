@@ -13,6 +13,8 @@ RUN set -x \
                 libmhash2 \
                 libc6 \
                 libmcrypt-dev \
+                libonig-dev \
+                libzip-dev \
                 zlib1g-dev \
                 g++ \
                 git \
@@ -21,7 +23,7 @@ RUN set -x \
         && rm -rf /var/lib/apt/lists/* \
         && docker-php-ext-configure intl \
         && docker-php-ext-install -j$(nproc) mbstring intl zip pdo_mysql pdo_pgsql mysqli opcache soap \
-        && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr \
+        && docker-php-ext-configure gd --with-freetype --with-jpeg \
         && docker-php-ext-install -j$(nproc) gd
 
 # set recommended PHP.ini settings

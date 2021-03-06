@@ -18,6 +18,7 @@ services:
       - new-site-db
     container_name: ${CONTAINER_SITE_NAME}
     build: .
+    # image: ${SITE_IMAGE:-wordpress}:${SITE_VERSION:-latest}
     restart: unless-stopped
     volumes:
       - ${SITE_FILES}:/var/www/html
