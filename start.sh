@@ -58,12 +58,28 @@ elif [ "$MYSQL_PASSWORD" == "user_password" ]; then
     export MYSQL_PASSWORD=$input6
 fi
 
+if [ -z "$VIRTUAL_HOST" ]; then
+    read -p  "VIRTUAL_HOST:" input7
+    export VIRTUAL_HOST=$input7
+elif [ "$VIRTUAL_HOST" == "your.domain.com" ]; then
+    read -p  "Enter VIRTUAL_HOST:" input7
+    export VIRTUAL_HOST=$input8
+fi
+
+if [ -z "$LETSENCRYPT_HOST" ]; then
+    read -p  "LETSENCRYPT_HOST:" input8
+    export LETSENCRYPT_HOST=$input8
+elif [ "$LETSENCRYPT_HOST" == "your.domain.com" ]; then
+    read -p  "Enter LETSENCRYPT_HOST:" input8
+    export LETSENCRYPT_HOST=$input8
+fi
+
 if [ -z "$LETSENCRYPT_EMAIL" ]; then
-    read -p  "LETSENCRYPT_EMAIL:" input7
-    export LETSENCRYPT_EMAIL=$input7
+    read -p  "LETSENCRYPT_EMAIL:" input9
+    export LETSENCRYPT_EMAIL=$input9
 elif [ "$LETSENCRYPT_EMAIL" == "your_email@domain.com" ]; then
-    read -p  "Enter LETSENCRYPT_EMAIL:" input7
-    export LETSENCRYPT_EMAIL=$input7
+    read -p  "Enter LETSENCRYPT_EMAIL:" input9
+    export LETSENCRYPT_EMAIL=$input9
 fi
 
 # Create docker network if not already created

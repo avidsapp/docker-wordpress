@@ -7,6 +7,7 @@ RUN set -x \
                 libfreetype6-dev \
                 libjpeg62-turbo-dev \
                 libpng-dev \
+                libonig-dev \
                 libpq-dev \
                 libicu-dev \
                 libxml2-dev \
